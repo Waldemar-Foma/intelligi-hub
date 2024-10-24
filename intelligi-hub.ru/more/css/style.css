@@ -1,0 +1,313 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #3B88B8, #1F3A63); /* Градиент фона */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота 100% экрана */
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+}
+
+/* Кастомный скроллбар для Webkit браузеров */
+::-webkit-scrollbar {
+    width: 4px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #2D2443; /* Цвет фона трека (чуть темнее градиента) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Белый цвет ползунка скроллбара */
+    border-radius: 10px; /* Радиус скругления ползунка */
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0; /* Цвет ползунка при наведении (белый с оттенком) */
+}
+
+/* Кастомный скроллбар для Firefox */
+.scrollable-element {
+    scrollbar-width: thin; /* Тонкий скроллбар */
+    scrollbar-color: #ffffff #3e2b6f; /* Цвет ползунка и трека */
+}
+
+.scrollable-element:hover {
+    scrollbar-color: #e0e0e0 #3e2b6f; /* Цвет ползунка и трека при наведении */
+}
+/* Шапка сайта */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Вступительный блок */
+.intro {
+    text-align: left;
+    padding: 100px 20px; /* Убираем отступы по краям */
+    margin-top: 80px; /* Отступ для учета фиксированной шапки */
+    width: 100%; /* Восстанавливаем ширину блока на 100% */
+}
+
+.intro h1 {
+    font-size: 4rem; /* Возвращаем исходный размер шрифта для заголовка */
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-size: 2rem; /* Возвращаем исходный размер шрифта для подзаголовка */
+    margin-bottom: 40px;
+}
+
+.intro p {
+    font-size: 1.2rem; /* Возвращаем исходный размер шрифта для параграфа */
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Кнопки */
+.button {
+    background-color: #008dd5;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #008dd5;
+}
+
+/* Разделы */
+.sections {
+    padding: 50px 20px; /* Убираем отступы по краям */
+    display: flex;
+    flex-direction: column;
+    color: black; /* Добавляем черный цвет текста для секции "Разделы" */
+    max-width: 800px; /* Устанавливаем максимальную ширину контейнера секций */
+    margin: 0 auto; /* Выравниваем по центру */
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: black; /* Черный цвет текста внутри каждого раздела */
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: black; /* Черный цвет для заголовков разделов */
+}
+
+.section-title h3 {
+    margin: 0;
+}
+
+.section-title img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section-content {
+    text-align: center;
+    color: black; /* Черный цвет текста в содержимом раздела */
+}
+
+/* Об авторе */
+.about {
+    padding: 50px 20px; /* Убираем отступы по краям */
+    display: flex;
+    flex-direction: column; /* Вертикально для адаптивности */
+    max-width: 800px; /* Устанавливаем максимальную ширину контейнера "Об авторе" */
+    margin: 0 auto; /* Выравниваем по центру */
+}
+
+.about-image {
+    width: 100%; /* Ширина изображения 100% */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 100%;
+}
+
+/* Форма регистрации */
+.registration {
+    padding: 50px 20px; /* Убираем отступы по краям */
+    display: flex;
+    justify-content: center; /* Центрируем форму по горизонтали */
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Устанавливаем максимальную ширину формы */
+    margin: 0 auto; /* Выравниваем по центру */
+}
+
+.registration form {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Устанавливаем ширину формы на 100% */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #E9E9E9;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине поля ввода */
+}
+
+/* Футер */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.sections .section {
+            position: relative; /* Относительное позиционирование для наложения изображения */
+            background-color: rgba(255, 255, 255, 0.9); /* Белый полупрозрачный фон для текста */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden; /* Чтобы изображение не выходило за пределы блока */
+            z-index: 1;
+        }
+
+        .sections .section .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2; /* Поверх изображения */
+        }
+
+        .sections .section img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover; /* Подгоняем размер изображения по блоку */
+            opacity: 0.3; /* Прозрачность 30% */
+            z-index: 0;
+        }
+
+        .section-content {
+            z-index: 2; /* Контент поверх изображения */
+            position: relative;
+        }
+
+        /* Стили кнопки */
+        .button {
+            background-color: #513dff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        .button:hover {
+            background-color: #402bff;
+        }
+/* Адаптивность */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 3rem; /* Уменьшенный размер шрифта для заголовка */
+    }
+
+    .intro h2 {
+        font-size: 1.5rem; /* Уменьшенный размер шрифта для подзаголовка */
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 2rem; /* Уменьшенный размер шрифта для заголовка */
+    }
+
+    .intro h2 {
+        font-size: 1.2rem; /* Уменьшенный размер шрифта для подзаголовка */
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+}

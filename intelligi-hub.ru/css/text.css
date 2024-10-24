@@ -1,0 +1,21 @@
+.text {
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: auto;
+}
+.text_1 {
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.content {
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+	}
+.user {
+	border-top-width: 10px
+}

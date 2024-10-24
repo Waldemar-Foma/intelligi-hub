@@ -1,0 +1,73 @@
+     body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+             background: linear-gradient(to bottom, #71619B, #1F104A);
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #79699E;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+.back-button {
+    font-size: 38px;
+    text-decoration: none;
+    color: #71619B;
+}
+.text-kin{
+			margin-left: 50px;
+			margin-top: -65px
+		}
+/* Кастомный скроллбар для Webkit браузеров */
+::-webkit-scrollbar {
+    width: 4px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #2D2443; /* Цвет фона трека (чуть темнее градиента) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Белый цвет ползунка скроллбара */
+    border-radius: 10px; /* Радиус скругления ползунка */
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0; /* Цвет ползунка при наведении (белый с оттенком) */
+}
+
+/* Кастомный скроллбар для Firefox */
+.scrollable-element {
+    scrollbar-width: thin; /* Тонкий скроллбар */
+    scrollbar-color: #ffffff #3e2b6f; /* Цвет ползунка и трека */
+}
+
+.scrollable-element:hover {
+    scrollbar-color: #e0e0e0 #3e2b6f; /* Цвет ползунка и трека при наведении */
+}

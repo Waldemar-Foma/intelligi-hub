@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://i.imgur.com/TH652ob.png" type="image/png">
+    <title>Физика 11 класс</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                  <li><a href="#intro">Главная</a></li>
+				  <li><a href="#sec">Разделы</a></li>
+				  <li><a href="more_page/author.html">Об авторе</a></li>
+				  <li><a href="more_page/registration.html">Профиль</a></li>
+				  <li><a href="more_page/section.html">Добавить новый раздел</a></li>
+                </ul>
+			</nav>
+        </div>
+    </header>
+    <main>
+        <section id="intro" class="intro">
+            <div class="container">
+				<center>
+				<h1>Физика</h1>
+                <h2>11 класс</h2>
+                <p>Хочешь освежить память и вспомнить темы по физике, чтобы успешно сдать ЕГЭ?</p>
+                <p>Тогда этот сайт специально для тебя.</p>
+                <p>На сайте представлена теория по 4 разделам, к ним прилагаются практические задания.</p>
+				</center>
+            </div>
+        </section>
+         <section id="sec" class="sections">
+            <div class="container">
+                <div class="section">
+                    <div class="section-title">
+                        <center>
+							<h3>Кинематика</h3>
+						</center>
+                    </div>
+                    <img src="img/kin.png" alt="Кинематика">
+                    <div class="section-content">
+                        <p>Кинематика — это раздел механики, изучающий движение тел без учета сил, вызывающих это движение.</p>
+                        <a href="content/index_1.html" class="button">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">
+                        <h3>Динамика</h3>
+                    </div>
+                    <img src="img/kin.png" alt="Динамика">
+                    <div class="section-content">
+                        <p>Динамика — это раздел механики, изучающий движение тел под действием сил. Она исследует причины изменения движения, то есть ускорения, и их последствия.</p>
+                        <a href="content/index_2.html" class="button">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">
+                        <h3>Статика</h3>
+                    </div>
+                    <img src="img/kin.png" alt="Статика">
+                    <div class="section-content">
+                        <p>Статика - раздел механики, изучающий тела, находящиеся в покое или движущиеся с постоянной скоростью.</p>
+                        <a href="content/index_3.html" class="button">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">
+                        <h3>Законы сохранения энергии и импульса</h3>
+                    </div>
+                    <img src="img/kin.png" alt="Законы сохранения">
+                    <div class="section-content">
+                        <p>Формулировка: В изолированной системе полная механическая энергия тела (сумма потенциальной и кинетической энергий) остается постоянной.</p>
+                        <a href="content/index_4.html" class="button">Подробнее</a>
+                    </div>
+                </div>
+				<section id="sections" class="sections">
+    <div class="container" id="sectionsContainer"></div>
+</section>
+
+<script>
+    const sectionsContainer = document.getElementById('sectionsContainer');
+
+    // Загрузка разделов из localStorage
+    for (let i = 0; i < localStorage.length; i++) {
+        const title = localStorage.key(i);
+        const section = JSON.parse(localStorage.getItem(title));
+
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'section';
+        sectionDiv.innerHTML = `
+            <div class="section-title">
+                <h3>${section.title}</h3>
+            </div>
+            <div class="section-content">
+                <p>${section.content}</p>
+                <a href="content/${title}.html" class="button">Подробнее</a>
+            </div>
+        `;
+        sectionsContainer.appendChild(sectionDiv);
+    }
+</script>
+            </div>
+		</section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Исключительное право на учебную программу и все сопутствующие ей учебные материалы, доступные в рамках сервиса, принадлежат "Образовательные продукты и технологии Foma_Studio". Воспроизведение, копирование, распространение и иное использование программы и материалов допустимо только с предварительного письменного согласия "Образовательные продукты и технологии Foma_Studio".</p>
+		<p>© 2024 Все права защищены</p>
+        </div>
+    </footer>
+</body>
+</html>
