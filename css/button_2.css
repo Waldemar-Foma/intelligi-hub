@@ -1,0 +1,4 @@
+.button_2{
+		.iksweb{display: inline-block;cursor: pointer; font-size:15px;text-decoration:none;padding:8px 9px; color:#e3f5ff;background:#0095ff;border-radius:3px;border:3px solid #0095ff;}
+		.iksweb:hover{background:#0260a3;color:#ffffff;border:3px solid #0260a3;transition: all 0s ease;}
+	}

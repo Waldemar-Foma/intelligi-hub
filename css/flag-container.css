@@ -1,0 +1,18 @@
+.flag-container {
+	position: absolute;
+	margin-left: 67em;
+    margin-top: -110px;
+}
+
+.flag-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px; 
+}
+
+.flag-button img {
+    width: 30px;
+    height: auto;
+}

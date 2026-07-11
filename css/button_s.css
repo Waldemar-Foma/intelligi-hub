@@ -1,0 +1,15 @@
+.iksweb{display: inline-block;cursor: pointer; font-size:14px;text-decoration:none;padding:11px 20px; color:#ffffff;background:#00a7f5;border-radius:8px;border:3px solid #00a7f5;}
+.iksweb:hover{background:#048ecf;color:#ffffff;border:3px solid #048ecf;transition: all 0s 	ease;}
+.thumbnail.rdsubs-list-tile.rdsubs-list-item-product .row-fluid .col-xs-6.span6 {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.thumbnail.rdsubs-list-tile.rdsubs-list-item-product .row-fluid .col-xs-6.span6 .btn.btn-success.pull-right {
+    display: block !important;
+    width: 100% !important;
+}
+
+.thumbnail.rdsubs-list-tile.rdsubs-list-item-product .row-fluid .col-xs-6.span6 .rdsubs-price {
+    margin-left: 0 !important;
+}
